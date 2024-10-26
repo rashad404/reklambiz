@@ -23,15 +23,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // View::share([
-        //     'metaTitle' => $view->metaTitle ?? '',
-        //     'metaKeywords' => $view->metaKeywords ?? '',
-        //     'metaDescription' => $view->metaDescription ?? '',
-        //     'metaImg' => $view->metaImg ?? '',
-        //     'menus' => Menu::all(),
-        //     'locale' => App::getLocale(),
-        // ]);
-        // Blade::componentNamespace('App\\View\\Components\\Icons', 'icons');
+        View::share([
+            'metaTitle' => $view->metaTitle ?? '',
+            'metaKeywords' => $view->metaKeywords ?? '',
+            'metaDescription' => $view->metaDescription ?? '',
+            'metaImg' => $view->metaImg ?? '',
+            'menus' => Menu::all(),
+            'locale' => App::getLocale(),
+        ]);
+        Blade::componentNamespace('App\\View\\Components\\Icons', 'icons');
 
     }
 }
