@@ -5,7 +5,7 @@
     <!-- Hero Section with Animation -->
     <section class="relative h-screen bg-gradient-to-r from-blue-600 to-blue-800 overflow-hidden">
         <div class="absolute inset-0 bg-black/30"></div>
-        <div class="relative container mx-auto px-6 h-full flex items-center">
+        <div class="max-w-7xl relative container mx-auto px-6 h-full flex items-center">
             <div class="max-w-3xl text-white" data-aos="fade-up">
                 <h1 class="text-5xl font-bold mb-6">{{ __('hero.title') }}</h1>
                 <p class="text-xl mb-8">{{ __('hero.subtitle') }}</p>
@@ -30,7 +30,7 @@
 
     <!-- Stats Section with Counter Animation -->
     <section class="py-16 bg-white" data-aos="fade-up">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
                     <div class="text-4xl font-bold text-blue-600 mb-2">
@@ -62,7 +62,7 @@
 
     <!-- Ad Formats Carousel -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">{{ __('formats.title') }}</h2>
             <div class="splide" id="ad-formats-carousel">
                 <div class="splide__track">
@@ -96,7 +96,7 @@
 
     <!-- Interactive Features Section -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">{{ __('features.title') }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
@@ -152,7 +152,7 @@
 
     <!-- Interactive Platform Tabs -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <div class="flex justify-center mb-8" data-aos="fade-up">
                 <div class="inline-flex rounded-lg border border-gray-200">
                     <button onclick="showTab('publishers')" 
@@ -210,7 +210,7 @@
 
     <!-- Testimonials Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">{{ __('testimonials.title') }}</h2>
             <div class="splide" id="testimonials-carousel">
                 <div class="splide__track">
@@ -239,7 +239,7 @@
 
     <!-- Contact Form Section -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">{{ __('contact.title') }}</h2>
                 <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
@@ -280,7 +280,7 @@
 
     <!-- FAQ Section with Accordions -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
+        <div class="max-w-7xl container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">{{ __('faq.title') }}</h2>
             <div class="max-w-3xl mx-auto space-y-4">
                 @foreach(range(1, 5) as $i)
@@ -302,7 +302,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div class="container mx-auto px-6 text-center">
+        <div class="max-w-7xl container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">{{ __('cta.title') }}</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">{{ __('cta.subtitle') }}</p>
             <a href="{{ route('register') }}" 

@@ -23,6 +23,8 @@ class SetLocale
         } elseif(null !== session('locale')) {
             // If no locale is specified in the request, use the session locale
             App::setLocale(session('locale')); 
+        } else {
+            App::setLocale(config('app.locale'));
         }
 
         return $next($request);
