@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Menu;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,13 +23,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share([
-            'metaTitle' => $view->metaTitle ?? '',
-            'metaKeywords' => $view->metaKeywords ?? '',
-            'metaDescription' => $view->metaDescription ?? '',
-            'metaImg' => $view->metaImg ?? '',
-            'menus' => Menu::all(),
-            'locale' => App::getLocale(),
-        ]);
+        // View::share([
+        //     'metaTitle' => $view->metaTitle ?? '',
+        //     'metaKeywords' => $view->metaKeywords ?? '',
+        //     'metaDescription' => $view->metaDescription ?? '',
+        //     'metaImg' => $view->metaImg ?? '',
+        //     'menus' => Menu::all(),
+        //     'locale' => App::getLocale(),
+        // ]);
+        // Blade::componentNamespace('App\\View\\Components\\Icons', 'icons');
+
     }
 }

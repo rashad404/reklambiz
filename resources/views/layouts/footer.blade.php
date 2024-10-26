@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <div class="space-y-8 xl:col-span-1">
-                <img class="h-10" width="107" height="40" src="{{ asset('images/ug_news_white.svg') }}" alt="{{ config('app.name') }} logo"/>
+                <img class="h-16" src="{{ asset('images/logo-white.svg') }}" alt="{{ config('app.name') }} logo"/>
                 <p class="text-gray-400 text-base">
                     {{ __('FooterAboutText') }}
                 </p>
@@ -37,7 +37,7 @@
                             @foreach ($menus->take(ceil($menus->count() / 2)) as $menu)
                                 <li>
                                     <a href="{{ $menu->url }}" class="text-base text-gray-300 hover:text-white">
-                                        {{ $menu->name }}{{ __(' news') }}
+                                        {{ $menu->title }}
                                     </a>
                                 </li>
                             @endforeach
@@ -51,7 +51,7 @@
                             @foreach ($menus->skip(ceil($menus->count() / 2)) as $menu)
                                 <li>
                                     <a href="{{ $menu->url }}" class="text-base text-gray-300 hover:text-white">
-                                        {{ $menu->name }}{{ __(' news') }}
+                                        {{ $menu->title }}
                                     </a>
                                 </li>
                             @endforeach

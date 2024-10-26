@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdvertiserController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\PublicController;
 
@@ -68,7 +69,10 @@ Route::middleware(['auth', 'isPublisher'])->prefix('publisher')->group(function 
     Route::get('/revenue', [PublisherController::class, 'revenue'])->name('publisher.revenue');
 });
 
-
+Route::get('lang/{locale}', [LanguageController::class, 'switchLanguage'])->name('lang.switch');
+Route::get('/locale/{locale}', function ($locale) {
+    return redirect()->back(); // Redirect back to the previous page
+})->name('locale.set');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard12', [PublisherController::class, 'index'])->name('user.channels.create');
@@ -114,6 +118,5 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/documentations/webhooks/news', [PublisherController::class, 'webhookNews'])->name('documentations.webhooks.news');
 
     });
-
     
 });

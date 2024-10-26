@@ -51,7 +51,7 @@
 
         <!-- Page Content -->
         <main class="flex-1 w-full">
-            <div class="max-w-7xl container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="">
                 @yield('content')
             </div>
         </main>
