@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'az'),
 
     'available_locales' => ['az', 'en'], // Supported languages
 
